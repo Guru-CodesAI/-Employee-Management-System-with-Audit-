@@ -1,0 +1,90 @@
+:root {
+    --ink: #172033;
+    --muted: #667085;
+    --line: #e4e8ef;
+    --surface: #ffffff;
+    --canvas: #f5f7fb;
+    --accent: #4f46e5;
+    --accent-dark: #3930b8;
+    --accent-soft: #eef2ff;
+    --success: #067647;
+    --success-bg: #ecfdf3;
+    --danger: #b42318;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--canvas); color: var(--ink); }
+a { color: inherit; text-decoration: none; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 76px; padding: 0 max(5vw, 24px); background: #fff; border-bottom: 1px solid var(--line); }
+.brand { font-size: 19px; font-weight: 800; letter-spacing: -.5px; color: var(--accent); }
+.brand span { color: var(--ink); font-size: 15px; font-weight: 650; margin-left: 8px; letter-spacing: 0; }
+.topbar nav a { font-size: 14px; font-weight: 650; color: #475467; }
+.topbar nav .nav-cta { color: var(--accent); }
+.page-wrap { max-width: 1250px; width: 90%; margin: 48px auto 34px; }
+.page-wrap.narrow { max-width: 760px; }
+.page-heading { margin-bottom: 28px; }
+.heading-row { display: flex; justify-content: space-between; align-items: end; gap: 24px; }
+.eyebrow { margin: 0 0 10px; color: var(--accent); font-size: 11px; letter-spacing: 1.8px; font-weight: 800; }
+h1 { margin: 0; font-size: clamp(28px, 4vw, 36px); letter-spacing: -1.4px; line-height: 1.15; }
+h2 { margin: 0; font-size: 18px; letter-spacing: -.3px; }
+h3 { margin: 0 0 9px; font-size: 18px; }
+.muted { color: var(--muted); }
+.page-heading .muted { margin: 11px 0 0; }
+.small { font-size: 12px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 8px 24px rgba(16, 24, 40, .035); overflow: hidden; }
+.directory-panel { padding-top: 24px; }
+.panel-topline { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 0 25px 23px; }
+.panel-topline p { margin: 6px 0 0; }
+.count-pill { background: var(--accent-soft); color: var(--accent-dark); border-radius: 999px; padding: 7px 12px; font-size: 12px; font-weight: 750; white-space: nowrap; }
+.button { display: inline-flex; justify-content: center; align-items: center; gap: 8px; border: 1px solid transparent; border-radius: 9px; padding: 12px 16px; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; transition: .15s ease; }
+.button-primary { background: var(--accent); color: #fff; }
+.button-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.button-secondary { background: #fff; border-color: var(--line); color: #344054; }
+.button-secondary:hover { background: #f9fafb; }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; white-space: nowrap; }
+thead { background: #f9fafb; }
+th { padding: 13px 19px; color: #667085; text-align: left; text-transform: uppercase; letter-spacing: .65px; font-size: 10px; font-weight: 800; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+td { padding: 17px 19px; border-bottom: 1px solid #edf0f5; font-size: 13px; color: #344054; }
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:hover { background: #fbfcff; }
+.id-cell { color: #98a2b3; font-weight: 700; }
+.employee-name { color: var(--ink); font-size: 13px; font-weight: 750; margin-bottom: 5px; }
+.department-tag { display: inline-block; padding: 5px 8px; border-radius: 6px; background: #f2f4f7; color: #475467; font-size: 11px; }
+.salary-cell { font-weight: 750; color: #101828; }
+.empty-state { padding: 56px 20px 60px; text-align: center; border-top: 1px solid var(--line); }
+.empty-symbol { width: 54px; height: 54px; margin: 0 auto 18px; display: grid; place-items: center; border-radius: 15px; background: var(--accent-soft); color: var(--accent); font-size: 29px; }
+.empty-state p { margin: 0 0 22px; }
+.success-banner { display: flex; align-items: center; gap: 10px; margin: 0 0 20px; padding: 13px 16px; color: var(--success); background: var(--success-bg); border: 1px solid #abefc6; border-radius: 10px; font-size: 13px; font-weight: 650; }
+.success-icon { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: #d1fadf; font-weight: 900; }
+.narrow .panel { padding: 28px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 21px 18px; }
+.field { min-width: 0; }
+.field.full { grid-column: 1 / -1; }
+.field label { display: block; margin: 0 0 8px; font-size: 12px; font-weight: 750; color: #344054; }
+.field input { display: block; width: 100%; height: 44px; border: 1px solid #d0d5dd; border-radius: 8px; background: #fff; padding: 0 12px; color: var(--ink); font: inherit; font-size: 13px; outline: none; }
+.field input:focus { border-color: #818cf8; box-shadow: 0 0 0 3px rgba(99, 102, 241, .13); }
+.field-error { display: block; margin-top: 6px; color: var(--danger); font-size: 11px; }
+.error-summary { margin: 0 0 18px; padding: 12px 14px; color: var(--danger); background: #fef3f2; border: 1px solid #fecdca; border-radius: 8px; font-size: 12px; }
+.form-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 27px; padding-top: 22px; border-top: 1px solid var(--line); }
+.footnote { color: #98a2b3; font-size: 11px; text-align: center; margin: 19px 0 0; }
+.footer { text-align: center; padding: 24px; color: #98a2b3; font-size: 11px; }
+.footer span { padding: 0 7px; }
+@media (max-width: 800px) {
+    .page-wrap { width: 94%; margin-top: 32px; }
+    .heading-row { align-items: start; }
+    .desktop-cta { display: none; }
+    .panel-topline { padding-left: 16px; padding-right: 16px; }
+    td, th { padding-left: 14px; padding-right: 14px; }
+}
+@media (max-width: 520px) {
+    .topbar { min-height: 66px; padding: 0 16px; }
+    .brand { font-size: 16px; }
+    .brand span { font-size: 12px; margin-left: 4px; }
+    .topbar nav a { font-size: 12px; }
+    .narrow .panel { padding: 19px; }
+    .form-grid { grid-template-columns: 1fr; }
+    .field.full { grid-column: auto; }
+    .form-actions { flex-direction: column-reverse; }
+    .button { width: 100%; }
+}
